@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 95%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*--- Grid Layout ---*/
+
+.main-container {
+  height: 100vh; 
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 100px 100px minmax(300px, 1fr);
+  grid-gap: 10px;
+  grid-template-areas: 
+  "header main"  
+  "route main" 
+  "aside main";
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+  border-left: 1px solid lightskyblue;
+}
+
+.route {
+  grid-area: route;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+/*--- Post Grid ---*/
+
+.post-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid lightskyblue;
+}
+
+/*--- Posts and Comments ---*/
+
+.post-title {
+  text-decoration: none;
+  margin: 10px;
+}
+
+.post-title :hover {
+  background-color: lightgray;
+}
+
+.post-body {
+  text-decoration: none;
+  margin: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.post-data {
+  display: flex;
+  align-items: center;
+}
+
+.post-data-item {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
+
+/*--- Button Module ---*/
+
+.btn { 
+  padding: .3em .3em; 
+  text-decoration: none; 
+  border: 1px lightgray solid; 
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+} 
+
+.btn—content {
+  background: lightskyblue;
+  color: white;
+  font-size: 6px;
+}
+
+.btn-router {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  background-color: lightskyblue;
+  color: white;
+  font-size: 18px;
+  text-align: center; 
+}
+
+.btn-vote {
+  display: flex;
+}
+
+.btn-updown {
+  flex: 1;
+  padding: .1em .1em; 
+  text-decoration: none; 
+  border: 1px lightgray solid; 
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+  color: grey;
+}
+
+.btn-updown:hover {
+  background-color: lightskyblue;
+}
+
+
+/*--- Input Module ---*/
+
+.input {
+  display: block;
+  margin: 10px auto;
+  width: 60%;
+  height: 3rem;
+  border: 2px solid lightskyblue;
+  border-radius: 5px;
+  text-align: center;
+  background-color: white; 
+}
+
+.input-post {
+  height: 8rem;
+}
+
+.select {
+  width: 40%;
+}
+
+.text-danger {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: red;
+}
+
+.label {
+  font-weight: 500;
+  text-align: center;
+}
+
+
+/*--- Category List ---*/
+
+.category-parent {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.category-item {
+  font-size: 16px;
+  font-weight: 800;
+  border-bottom: 1px solid #ccc;
+}
+
+.category-link {
+  text-decoration: none;
+  color: darkblue;
+  display: block;
+  width: 200px;
+}
+
+.category-link:hover {
+  background-color: lightgray;
+}
+
+/*---Sort by--*/
+.sort-container {
+  text-align: center;
+}
+
+/* Headings */
+
+h1, h2, h3 {
+  text-align: center;
+  color: darkblue;  
+}
